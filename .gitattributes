@@ -1,0 +1,8 @@
+# Arquivos HTML
+*.html text
+
+# Arquivos CSS
+*.css text
+
+# Arquivos Shell Scripts
+*.sh text
