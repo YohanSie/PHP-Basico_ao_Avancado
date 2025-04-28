@@ -7,19 +7,20 @@ Esta foi a estrutura que usámos durante os primeiros vídeos deste módulo.
 */
 
 // dados de ligação
-$database = 'loja_web';
+$database = 'udemy_loja_online';
 $username = 'user_loja_web';
 $password = 'udemy123';
 
 // ligação
-$connection = new PDO("mysql:host=localhost;dbname=$database;charset=utf8", $username, $password);
+$connection = new PDO("mysql:host=localhost;port=3307;dbname=$database;charset=utf8", $username, $password);
 
 // carregar os dados (em formato de array de objetos)
-
+$results = $connection->query("SELECT * FROM clientes LIMIT 20")->fetchAll(PDO::FETCH_OBJ);
 
 // fechar a ligação
 $ligacao = null;
 
+echo "DEU CERTO!";
 /* 
 Imagina que vais ter que conectar várias vezes à base de dados!
 Vamos melhorar o nosso código. Vamos torná-lo modelar.
