@@ -4,17 +4,18 @@ use sys4soft\Database;
 
 define ('MYSQL_CONFIG', [
     'host' => 'localhost',
-    'port' => 3307,
     'dbname' => 'bd_stock',
+    'port' => '3307',
     'username' => 'root',
-    'password' => ''
-])
+    'password' => 'root'
+]);
 
 require_once 'Database.php';
 
 $db = new Database(MYSQL_CONFIG);
 
 // SELECT
+$results = $db->execute_query("SELECT * FROM stock limit 100");
 
 // INSERT
 
@@ -22,3 +23,8 @@ $db = new Database(MYSQL_CONFIG);
 
 
 // DELETE
+
+
+echo '<pre>';
+print_r($results);
+echo '</pre>';
