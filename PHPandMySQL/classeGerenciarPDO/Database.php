@@ -79,7 +79,7 @@ class Database
 
         // connection
         $connection = new PDO(
-            'mysql:host=' . $this->_host . ';dbname=' . $this->_database . ';charset=utf8',
+            'mysql:host=' . $this->_host . ';port=' . $this->_port . ';dbname=' . $this->_database . ';charset=utf8',
             $this->_username,
             $this->_password,
             array(PDO::ATTR_PERSISTENT => true)
