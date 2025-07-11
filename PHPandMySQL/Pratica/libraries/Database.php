@@ -60,7 +60,6 @@ class Database
                 $db->execute();
             }
             $results = $db->fetchAll($this->_return_type);
-
         } catch (PDOException $err) {
 
             // close connection
@@ -108,7 +107,6 @@ class Database
 
             // finish transaction
             $connection->commit();
-
         } catch (PDOException $err) {
 
             // undo all sql operations on error
