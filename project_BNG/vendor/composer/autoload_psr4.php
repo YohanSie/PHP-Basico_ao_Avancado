@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'bng\\Controllers\\' => array($baseDir . '/app/controllers'),
+    'BNG\\System\\' => array($baseDir . '/app/system'),
 );
