@@ -1,5 +1,5 @@
 <?php 
 
-define('APP_NAME', 'Basci Name Gathering');
+define('APP_NAME', 'Basic Name Gathering');
 
 ?>

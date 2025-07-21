@@ -2,14 +2,17 @@
 
 namespace bng\Controllers;
 
-class Main
-{
-    public function index($id = null)
-    {
-        echo "Estou dentro do conrtolador Main - Index";
-    }
+use bng\Controllers\BaseController;
 
-    public function teste(){
-        die("Aqui no teste!");
+class Main extends BaseController
+{
+    public function index()
+    {
+        $data['nome'] = "Yohan";
+        $data['apelido'] = "Siedschlag";
+
+        $this->view('layouts/html_header');
+        $this->view('home', $data);
+        $this->view('layouts/html_footer');
     }
 }
