@@ -11,6 +11,7 @@
     "autoload": {
         "psr-4": {
             "bng\\Controllers\\": ["app/controllers"],
+            "bng\\Models\\": ["app/models"],
             "BNG\\System\\": ["app/system"]
         },
         "files": [
