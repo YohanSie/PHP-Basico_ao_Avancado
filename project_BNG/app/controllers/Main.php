@@ -11,7 +11,7 @@ class Main extends BaseController
     {
 
         $model = new Agents();
-        $results = $model->get_total_agents();
+        $results = $model->get_results();
         printData($results);
 
         $data['nome'] = "Yohan";
