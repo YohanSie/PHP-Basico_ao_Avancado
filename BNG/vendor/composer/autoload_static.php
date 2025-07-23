@@ -14,16 +14,17 @@ class ComposerStaticInitc912025f9896f2f4036051ebc6535577
     public static $prefixLengthsPsr4 = array (
         'b' => 
         array (
+            'bng\\System\\' => 11,
             'bng\\Models\\' => 11,
             'bng\\Controllers\\' => 16,
-        ),
-        'B' => 
-        array (
-            'BNG\\System\\' => 11,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'bng\\System\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/system',
+        ),
         'bng\\Models\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/models',
@@ -31,10 +32,6 @@ class ComposerStaticInitc912025f9896f2f4036051ebc6535577
         'bng\\Controllers\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/controllers',
-        ),
-        'BNG\\System\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app/system',
         ),
     );
 

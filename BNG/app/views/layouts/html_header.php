@@ -11,10 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600&display=swap" rel="stylesheet">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../public/assets/bootstrap/bootstrap.min.css">
     <!-- fontawesome -->
-    <link rel="stylesheet" href="assets/fontawesome/all.min.css">
+    <link rel="stylesheet" href="../../../public/assets/fontawesome/all.min.css">
     <!-- custom css -->
-    <link rel="stylesheet" href="assets/app.css">
+    <link rel="stylesheet" href="../../../public/assets/app.css">
 </head>
 <body>

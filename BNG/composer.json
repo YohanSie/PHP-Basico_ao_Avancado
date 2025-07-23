@@ -1,20 +1,21 @@
 {
     "name": "sys4soft/bng",
-    "description": "Aplicação para gestão de name gathering.",
+    "description": "Aplicacao para gestao de name gathering.",
     "type": "project",
     "authors": [
         {
-            "name": "Yohan Siedschlag"
+            "name": "Yohan",
+            "email": "yohansie.contato@gmail.com"
         }
     ],
     "require": {},
     "autoload": {
         "psr-4": {
-            "bng\\Controllers\\": ["app/controllers"],
-            "bng\\Models\\": ["app/models"],
-            "BNG\\System\\": ["app/system"]
+            "bng\\Controllers\\":["app/controllers"],
+            "bng\\Models\\":["app/models"],
+            "bng\\System\\":["app/system"]
         },
-        "files": [
+        "files":[
             "app/config.php",
             "app/helpers/functions.php"
         ]
