@@ -14,16 +14,18 @@ class Database
     private $_database;
     private $_username;
     private $_password;
+    private $_port;
     private $_return_type;
 
     // ========================================================================
     public function __construct($cfg_options, $return_type = 'object')
     {
         // set connection configurations
-        $this->_host = $cfg_options['host'];
-        $this->_database = $cfg_options['database'];
-        $this->_username = $cfg_options['username'];
-        $this->_password = $cfg_options['password'];
+        $this->_host = MYSQL_HOST;
+        $this->_database = MYSQL_DATABASE;
+        $this->_username = MYSQL_USERNAME;
+        $this->_password = MYSQL_PASSWORD;
+        $this->_port = MYSQL_PORT;
 
         // sets the return type
         if (!empty($return_type) && $return_type == 'object') {
@@ -40,7 +42,7 @@ class Database
 
         // connection
         $connection = new PDO(
-            'mysql:host=' . $this->_host . ';dbname=' . $this->_database . ';charset=utf8',
+            'mysql:host=' . $this->_host . ';dbname=' . $this->_database . ';charset=utf8;port=' . $this->_port,
             $this->_username,
             $this->_password,
             array(PDO::ATTR_PERSISTENT => true)
@@ -82,7 +84,7 @@ class Database
 
         // connection
         $connection = new PDO(
-            'mysql:host=' . $this->_host . ';dbname=' . $this->_database. ';charset=utf8',
+            'mysql:host=' . $this->_host . ';dbname=' . $this->_database . ';charset=utf8;port=' . $this->_port,
             $this->_username,
             $this->_password,
             array(PDO::ATTR_PERSISTENT => true)
