@@ -3,14 +3,13 @@
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 
-function Logger($mensagem = '', $level = 'info')
-{
+function Logger($mensagem = '', $level = 'info'){
     // criar o canal de log
-    $log = new Logger('app_logs');
-    $log->pushHandler(new StreamHandler(LOGS_PATH));
+    $log = new Logger('registro_logss');
+    $log->pushHandler(new StreamHandler('logs.log'));
 
     // adicionar registro de logs condicionado pelo level
-    switch ($level) {
+    switch ($level){
         case 'info':
             $log->info($mensagem);
             break;
@@ -35,25 +34,5 @@ function Logger($mensagem = '', $level = 'info')
         default:
             $log->info($mensagem);
             break;
-    }
-}
-
-function check_session()
-{
-    // check if there is an active session
-    return isset($_SESSION['user']);
-}
-
-function printData($data, $die = true)
-{
-    echo '<pre>';
-    if (is_object($data) || is_array($data)) {
-        print_r($data);
-    } else {
-        echo $data;
-    }
-
-    if ($die) {
-        die('<br>FIM</br>');
     }
 }

@@ -18,6 +18,14 @@ class ComposerStaticInitc912025f9896f2f4036051ebc6535577
             'bng\\Models\\' => 11,
             'bng\\Controllers\\' => 16,
         ),
+        'P' => 
+        array (
+            'Psr\\Log\\' => 8,
+        ),
+        'M' => 
+        array (
+            'Monolog\\' => 8,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -32,6 +40,14 @@ class ComposerStaticInitc912025f9896f2f4036051ebc6535577
         'bng\\Controllers\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/controllers',
+        ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/src',
+        ),
+        'Monolog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
     );
 

@@ -8,7 +8,9 @@
             "email": "yohansie.contato@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "monolog/monolog": "^3.9"
+    },
     "autoload": {
         "psr-4": {
             "bng\\Controllers\\":["app/controllers"],

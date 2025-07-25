@@ -1,6 +1,6 @@
 <?php return array(
     'root' => array(
-        'name' => 'sys4soft/bng',
+        'name' => 'cauti/monolog_class',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
         'reference' => '4e92e2bb56e41b8a4ae45a3d5f2322469a93b567',
@@ -10,6 +10,15 @@
         'dev' => true,
     ),
     'versions' => array(
+        'cauti/monolog_class' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '4e92e2bb56e41b8a4ae45a3d5f2322469a93b567',
+            'type' => 'project',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'monolog/monolog' => array(
             'pretty_version' => '3.9.0',
             'version' => '3.9.0.0',
@@ -33,15 +42,6 @@
             'provided' => array(
                 0 => '3.0.0',
             ),
-        ),
-        'sys4soft/bng' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => '4e92e2bb56e41b8a4ae45a3d5f2322469a93b567',
-            'type' => 'project',
-            'install_path' => __DIR__ . '/../../',
-            'aliases' => array(),
-            'dev_requirement' => false,
         ),
     ),
 );

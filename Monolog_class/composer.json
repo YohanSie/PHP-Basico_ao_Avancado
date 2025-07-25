@@ -1,0 +1,18 @@
+{
+    "name": "cauti/monolog_class",
+    "type": "project",
+    "require": {
+        "monolog/monolog": "^3.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cauti\\MonologClass\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yohan Sie.",
+            "email": "137341837+YohanSie@users.noreply.github.com"
+        }
+    ]
+}

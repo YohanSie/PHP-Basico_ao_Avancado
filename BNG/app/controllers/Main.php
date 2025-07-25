@@ -16,8 +16,12 @@ class Main extends BaseController
             return;
         }
 
+        $data['user'] = $_SESSION['user'];
+
         $this->view('layouts/html_header');
-        echo '<h3 class="text-white text-center">Olá Mundo!</h3>';
+        $this->view('navbar', $data);
+        $this->view('homepage', $data);
+        $this->view('footer');
         $this->view('layouts/html_footer');
     }
 
@@ -101,13 +105,20 @@ class Main extends BaseController
 
         $model = new Agents();
         $result = $model->check_login($username, $password);
-        
-        if(!$result['status']){
+
+        if (!$result['status']) {
+
+            // logger
+            logger("$username - Login Inválido", 'error');
+
             // invalid login
             $_SESSION['server_error'] = 'Login Inválido';
             $this->login_frm();
             return;
         }
+
+        // logger
+        logger("$username - Login com sucesso");
 
         // load user information to the session
         $results = $model->get_user_data($username);
@@ -122,10 +133,27 @@ class Main extends BaseController
         $this->index();
         return;
     }
+
+    public function logout()
+    {
+        if (!check_session()){
+            $this->index();
+            return;
+        }
+
+        // logger
+        logger($_SESSION['user']->name . ' - fez logout');
+
+        // clear user from session
+        unset($_SESSION['user']);
+
+        // go to index (login form)
+        $this->index();
+    }
 }
 
 /*
 admin@bng.com - Aa123456
-agent1@bng.com - Aa123456
-agent2@bng.com - Aa123456
+agente1@bng.com - Aa123456
+agente2@bng.com - Aa123456
 */
