@@ -1,3 +1,4 @@
 # Ignore all .sh files
 *.sh
 Monolog_class/vendor/monolog/monolog/
+Monolog_class/vendor/psr/log/
