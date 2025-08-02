@@ -5,3 +5,6 @@
 [2025-07-25T19:28:23.235786+00:00] app_logs.ERROR: admin@bng.com - Login Inválido [] []
 [2025-07-25T19:29:51.204911+00:00] app_logs.ERROR: admin@bng.com - Login Inválido [] []
 [2025-07-25T19:41:44.468813+00:00] app_logs.INFO: admin@bng.com - Login com sucesso [] []
+[2025-08-01T23:07:59.876227+00:00] app_logs.INFO: admin@bng.com - login com sucesso [] []
+[2025-08-01T23:09:53.264855+00:00] app_logs.INFO: admin@bng.com - login com sucesso [] []
+[2025-08-01T23:12:46.910870+00:00] app_logs.INFO: admin@bng.com - visualizou o PDF com o report estatístico. [] []
