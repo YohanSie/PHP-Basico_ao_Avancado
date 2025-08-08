@@ -4,3 +4,5 @@ Monolog_class/vendor/monolog/monolog/
 Monolog_class/vendor/psr/log/
 
 /vendor/
+BNG/vendor/
+/vendor/monolog
