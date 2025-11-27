@@ -10,7 +10,8 @@
     ],
     "require": {
         "monolog/monolog": "^3.9",
-        "phpmailer/phpmailer": "^6.10"
+        "phpmailer/phpmailer": "^6.10",
+        "phpoffice/phpspreadsheet": "^5.3"
     },
     "autoload": {
         "psr-4": {
