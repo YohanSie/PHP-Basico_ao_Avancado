@@ -9,7 +9,7 @@ forma que nos interessar melhor.
 */
 
 // carregar o autoload do composer para podermos usar o PhpSpreadsheet
-require '../vendor/autoload.php';
+require '../../../../BNG/vendor/autoload.php';
 
 // $dados vai ser preenchido com o conteúdo do ficheiro XLSX
 $dados = reader_xlsx('ficheiros_de_dados/ficheiro.xlsx');

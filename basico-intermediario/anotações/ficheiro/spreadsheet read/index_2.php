@@ -7,7 +7,7 @@ Os dados também serão devolvidos em forma de array.
 */
 
 // carregar o autoload do composer para podermos usar o PhpSpreadsheet
-require '../vendor/autoload.php';
+require '../../../../BNG/vendor/autoload.php';
 
 // $dados vai ser preenchido com o conteúdo do ficheiro CSV
 $dados = reader_csv('ficheiros_de_dados/ficheiro.csv');
