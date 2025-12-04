@@ -1,27 +1,35 @@
 {
-    "name": "sys4soft/bng",
-    "description": "Aplicacao para gestao de name gathering.",
-    "type": "project",
-    "authors": [
-        {
-            "name": "Yohan",
-            "email": "yohansie.contato@gmail.com"
-        }
-    ],
-    "require": {
-        "monolog/monolog": "^3.9",
-        "phpmailer/phpmailer": "^6.10",
-        "phpoffice/phpspreadsheet": "^5.3"
-    },
-    "autoload": {
-        "psr-4": {
-            "bng\\Controllers\\":["app/controllers"],
-            "bng\\Models\\":["app/models"],
-            "bng\\System\\":["app/system"]
-        },
-        "files":[
-            "app/config.php",
-            "app/helpers/functions.php"
-        ]
+  "name": "sys4soft/bng",
+  "description": "Aplicacao para gestao de name gathering.",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Yohan",
+      "email": "yohansie.contato@gmail.com"
     }
+  ],
+  "require": {
+    "monolog/monolog": "^3.9",
+    "phpmailer/phpmailer": "^6.10",
+    "phpoffice/phpspreadsheet": "^5.3",
+    "ext-pdo": "*",
+    "mpdf/mpdf": "^8.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "bng\\Controllers\\": [
+        "app/controllers"
+      ],
+      "bng\\Models\\": [
+        "app/models"
+      ],
+      "bng\\System\\": [
+        "app/system"
+      ]
+    },
+    "files": [
+      "app/config.php",
+      "app/helpers/functions.php"
+    ]
+  }
 }

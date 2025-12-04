@@ -19,9 +19,6 @@ function logger($message = '', $level = 'info')
 
     // add log message
     switch ($level) {
-        case 'info':
-            $log->info($message);
-            break;
         case 'notice':
             $log->notice($message);
             break;
@@ -40,7 +37,6 @@ function logger($message = '', $level = 'info')
         case 'emergency':
             $log->emergency($message);
             break;
-        
         default:
             $log->info($message);
             break;
@@ -58,7 +54,7 @@ function aes_encrypt($value)
 function aes_decrypt($value)
 {
     // decrypt $value
-    if(strlen($value) % 2 != 0){
+    if (strlen($value) % 2 != 0) {
         return false;
     }
 
@@ -75,13 +71,13 @@ function get_active_user_name()
 function printData($data, $die = true)
 {
     echo '<pre>';
-    if(is_object($data) || is_array($data)){
+    if (is_object($data) || is_array($data)) {
         print_r($data);
     } else {
         echo $data;
     }
 
-    if($die){
+    if ($die) {
         die('<br>FIM</br>');
     }
 }

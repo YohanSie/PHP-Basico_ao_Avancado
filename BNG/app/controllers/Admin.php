@@ -5,6 +5,7 @@ namespace bng\Controllers;
 use bng\Controllers\BaseController;
 use bng\Models\AdminModel;
 use bng\System\SendEmail;
+use Mpdf\MpdfException;
 
 class Admin extends BaseController
 {
@@ -112,6 +113,10 @@ class Admin extends BaseController
     }
 
     // =======================================================
+
+    /**
+     * @throws MpdfException
+     */
     public function create_pdf_report()
     {
         // check if session has a user with admin profile

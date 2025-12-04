@@ -143,6 +143,10 @@ class Agents extends BaseModel
     }
 
     // =======================================================
+
+    /**
+     * @throws \Exception
+     */
     public function add_new_client_to_database($post_data)
     {
         // add new client to database
