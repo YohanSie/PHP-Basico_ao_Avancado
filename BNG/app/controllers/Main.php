@@ -310,14 +310,13 @@ class Main extends BaseController
     // =======================================================
     public function define_password($purl = '')
     {
-        // if there is a open session, gets out!
-        if (check_session()) {
-            $this->index();
-            return;
-        }
-
-        // check if the purl is valid
+        // check if the purl is valid FIRST
         if (empty($purl) || strlen($purl) != 20) {
+            // if no valid purl and there's a session, go to index
+            if (check_session()) {
+                $this->index();
+                return;
+            }
             die('Erro nas credenciais de acesso.');
         }
 
@@ -327,6 +326,11 @@ class Main extends BaseController
 
         if (!$results['status']) {
             die('Erro nas credenciais de acesso.');
+        }
+
+        // IF purl is valid, clear any existing session to allow password definition
+        if (check_session()) {
+            unset($_SESSION['user']);
         }
 
         // check for validation error

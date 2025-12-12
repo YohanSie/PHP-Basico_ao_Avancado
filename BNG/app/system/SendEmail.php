@@ -20,15 +20,17 @@ class SendEmail
             // Uncomment to add server options from your email account provider
             // server settings
             
-            // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
-            // $mail->isSMTP();
-            // $mail->Host = EMAIL_HOST;
-            // $mail->SMTPAuth = true;
-            // $mail->Username = EMAIL_USERNAME;
-            // $mail->Password = EMAIL_PASSWORD;
-            // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-            // $mail->Port = EMAIL_PORT;
-            
+             $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+             $mail->isSMTP();
+             $mail->Host = EMAIL_HOST;
+             $mail->SMTPAuth = true;
+             $mail->Username = EMAIL_USERNAME;
+             $mail->Password = EMAIL_PASSWORD;
+             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+             $mail->Port = EMAIL_PORT;
+            $mail->SMTPAutoTLS = true;
+            $mail->SMTPDebug = 0;
+
 
             $mail->setFrom(EMAIL_FROM);
             $mail->addAddress($data['to']);
