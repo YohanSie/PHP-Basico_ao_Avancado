@@ -1,0 +1,17 @@
+{
+    "name": "yohansie/api",
+    "autoload": {
+        "psr-4": {
+            "Yohansie\\Api\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yohan Siedschlag",
+            "email": "cautios.yohan@gmail.com"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "^7.0"
+    }
+}
