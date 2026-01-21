@@ -1,6 +1,6 @@
 <?php return array(
     'root' => array(
-        'name' => 'yohansie/api',
+        'name' => 'yohansie/read_api',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
         'reference' => 'e7db86c2836e9a7f5b1237f2256b8cca9290ca96',
@@ -19,7 +19,7 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'yohansie/api' => array(
+        'yohansie/read_api' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
             'reference' => 'e7db86c2836e9a7f5b1237f2256b8cca9290ca96',

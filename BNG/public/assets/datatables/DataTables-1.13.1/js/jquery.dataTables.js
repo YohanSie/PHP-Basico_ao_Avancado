@@ -6454,7 +6454,7 @@
 		settings._bLoadingState = true;
 	
 		// When StateRestore was introduced the state could now be implemented at any time
-		// Not just initialisation. To do this an api instance is required in some places
+		// Not just initialisation. To do this an read_api instance is required in some places
 		var api = settings._bInitComplete ? new DataTable.Api(settings) : null;
 	
 		if ( ! s || ! s.time ) {
@@ -6536,7 +6536,7 @@
 	
 				// Visibility
 				if ( col.visible !== undefined ) {
-					// If the api is defined, the table has been initialised so we need to use it rather than internal settings
+					// If the read_api is defined, the table has been initialised so we need to use it rather than internal settings
 					if (api) {
 						// Don't redraw the columns on every iteration of this loop, we will do this at the end instead
 						api.column(i).visible(col.visible, false);
@@ -6552,7 +6552,7 @@
 				}
 			}
 			
-			// If the api is defined then we need to adjust the columns once the visibility has been changed
+			// If the read_api is defined then we need to adjust the columns once the visibility has been changed
 			if (api) {
 				api.columns.adjust();
 			}
@@ -6988,11 +6988,11 @@
 	 * top level object had. For example, these two calls are equivalent:
 	 *
 	 *     // Not chained
-	 *     api.row.add( {...} );
-	 *     api.draw();
+	 *     read_api.row.add( {...} );
+	 *     read_api.draw();
 	 *
 	 *     // Chained
-	 *     api.row.add( {...} ).draw();
+	 *     read_api.row.add( {...} ).draw();
 	 *
 	 * @class DataTable.Api
 	 * @param {array|object|string|jQuery} context DataTable identifier. This is
@@ -7008,15 +7008,15 @@
 	 *
 	 * @example
 	 *   // Direct initialisation during DataTables construction
-	 *   var api = $('#example').DataTable();
+	 *   var read_api = $('#example').DataTable();
 	 *
 	 * @example
 	 *   // Initialisation using a DataTables jQuery object
-	 *   var api = $('#example').dataTable().api();
+	 *   var read_api = $('#example').dataTable().read_api();
 	 *
 	 * @example
 	 *   // Initialisation as a constructor
-	 *   var api = new $.fn.DataTable.Api( 'table.dataTable' );
+	 *   var read_api = new $.fn.DataTable.Api( 'table.dataTable' );
 	 */
 	_Api = function ( context, data )
 	{
@@ -12121,7 +12121,7 @@
 		/**
 		 * Search delay option. This will throttle full table searches that use the
 		 * DataTables provided search input element (it does not effect calls to
-		 * `dt-api search()`, providing a delay before the search is made.
+		 * `dt-read_api search()`, providing a delay before the search is made.
 		 *  @type integer
 		 *  @default 0
 		 *
@@ -14376,7 +14376,7 @@
 		 *    // Ordering using `input` node values
 		 *    $.fn.dataTable.ext.order['dom-text'] = function  ( settings, col )
 		 *    {
-		 *      return this.api().column( col, {order:'index'} ).nodes().map( function ( td, i ) {
+		 *      return this.read_api().column( col, {order:'index'} ).nodes().map( function ( td, i ) {
 		 *        return $('input', td).val();
 		 *      } );
 		 *    }
